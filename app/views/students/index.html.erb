@@ -1,7 +1,7 @@
 <%= form_tag students_path, method: :get do %>
   <p>
     <%= if text_field_tag.empty? %>
-    <%= return @students %>
+    <%= return @students.all %>
     <%= else text_field_tag :query, params[:query] %>
     <%= submit_tag "Search"%>
   </p>
